@@ -1,0 +1,12 @@
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\Roa.Domain.csproj.AssemblyReference.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\Roa.Domain.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\Roa.Domain.AssemblyInfoInputs.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\Roa.Domain.AssemblyInfo.cs
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\Roa.Domain.csproj.CoreCompileInputs.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\bin\Debug\net6.0\Roa.Domain.deps.json
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\bin\Debug\net6.0\Roa.Domain.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\bin\Debug\net6.0\Roa.Domain.pdb
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\Roa.Domain.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\refint\Roa.Domain.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\Roa.Domain.pdb
+Z:\Projects\Personal\GFT\roa-api\Roa.Domain\obj\Debug\net6.0\ref\Roa.Domain.dll

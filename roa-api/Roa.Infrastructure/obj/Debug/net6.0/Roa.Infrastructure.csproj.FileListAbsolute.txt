@@ -1,0 +1,17 @@
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\bin\Debug\net6.0\Roa.Infrastructure.deps.json
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\bin\Debug\net6.0\Roa.Infrastructure.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\bin\Debug\net6.0\Roa.Infrastructure.pdb
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.csproj.AssemblyReference.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.AssemblyInfoInputs.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.AssemblyInfo.cs
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.csproj.CoreCompileInputs.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\refint\Roa.Infrastructure.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.pdb
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\ref\Roa.Infrastructure.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\bin\Debug\net6.0\Roa.Infrastructure.runtimeconfig.json
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\bin\Debug\net6.0\Roa.Domain.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\bin\Debug\net6.0\Roa.Domain.pdb
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.csproj.CopyComplete
+Z:\Projects\Personal\GFT\roa-api\Roa.Infrastructure\obj\Debug\net6.0\Roa.Infrastructure.genruntimeconfig.cache

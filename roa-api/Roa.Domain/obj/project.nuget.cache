@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VpzsibSiQ++7CWUWRR0ak7WwIhrTw6reDbWJVkg70W4BfsfwICCmkZpG25V/oicqRrXO7IwwFDfoVhRQqdgPIQ==",
+  "success": true,
+  "projectFilePath": "Z:\\Projects\\Personal\\GFT\\roa-api\\Roa.Domain\\Roa.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

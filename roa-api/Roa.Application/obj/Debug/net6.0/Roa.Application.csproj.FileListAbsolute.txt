@@ -1,0 +1,15 @@
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\Roa.Application.csproj.AssemblyReference.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\Roa.Application.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\Roa.Application.AssemblyInfoInputs.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\Roa.Application.AssemblyInfo.cs
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\Roa.Application.csproj.CoreCompileInputs.cache
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\bin\Debug\net6.0\Roa.Application.deps.json
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\bin\Debug\net6.0\Roa.Application.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\bin\Debug\net6.0\Roa.Application.pdb
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\bin\Debug\net6.0\Roa.Domain.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\bin\Debug\net6.0\Roa.Domain.pdb
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\Roa.Application.csproj.CopyComplete
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\Roa.Application.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\refint\Roa.Application.dll
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\Roa.Application.pdb
+Z:\Projects\Personal\GFT\roa-api\Roa.Application\obj\Debug\net6.0\ref\Roa.Application.dll

@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+a,
+button {
+  span {
+    display: flex;
+    align-items: center;
+
+    unity-icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+back-nav-header {
+  position: relative;
+  left: -2rem;
+}
+
+.swal2-actions button svg {
+  position: relative;
+  top: 0.2rem;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 44px;
+  z-index: 999;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cdk-overlay-container {
+  z-index: 1010;
+}
