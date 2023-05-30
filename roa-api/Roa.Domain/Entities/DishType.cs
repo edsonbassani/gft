@@ -8,6 +8,7 @@ public class DishType : Entity
     {
         Id = id;
         Name = name;
+        Validate(this, new DishTypeValidator());
     }
 
     public string Name { get; private set; }

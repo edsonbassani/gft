@@ -1,7 +1,6 @@
 ﻿using Roa.Domain.Entities;
 using Roa.Domain.Repositories;
 using Roa.Infrastructure.Repositories;
-using Roa.Infrastructure.Repositories.Dishes;
 
 namespace Roa.API.Modules;
 

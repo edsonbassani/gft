@@ -21,6 +21,6 @@ public class BaseRepository<T> : IRepository<T> where T : Entity
 
     public async Task<T> GetById(int id)
     {
-        return await GetAll().FirstOrDefaultAsync(p => p.Id == id);
+        return await GetAll().SingleOrDefaultAsync(p => p.Id == id);
     }
 }

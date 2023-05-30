@@ -12,7 +12,7 @@ using Roa.Infrastructure.Context;
 namespace Roa.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20230530024406_Initial")]
+    [Migration("20230530181006_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

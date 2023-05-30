@@ -21,6 +21,12 @@ internal class PeriodMap : IEntityTypeConfiguration<Period>
         builder.HasIndex(i => i.Name)
                .IsUnique();
 
+        builder.Property(i => i.StartTime)
+               .IsRequired();
+
+        builder.Property(i => i.EndTime)
+               .IsRequired();
+
         builder.HasData(
           new Period(1, "Morning", new TimeSpan(6, 0, 0), new TimeSpan(11, 59, 59)),
           new Period(2, "Night", new TimeSpan(20, 00, 00), new TimeSpan(23, 59, 59))

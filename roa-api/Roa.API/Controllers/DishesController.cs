@@ -1,12 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
-using System.Data;
-using System.Text.Json;
 using Roa.Application.DTOs;
-using Roa.Domain.Repositories;
 using Roa.Domain.Entities;
+using Roa.Domain.Repositories;
 
 namespace Roa.API.Controllers.Programs;
 
@@ -26,9 +22,11 @@ public class DishesController : Controller
     [HttpGet]
     [Produces("application/json")]
     [ProducesResponseType(typeof(IEnumerable<DishDto>), StatusCodes.Status200OK)]
-    public ActionResult<List<Dish>> GetAll()
+    public ActionResult<List<DishDto>> GetAll()
     {
         var dishes = _dishRepository.GetAll();
-        return Ok(dishes);
+        var dishesDTO = _mapper.Map<List<DishDto>>(dishes);
+
+        return Ok(dishesDTO);
     }
 }

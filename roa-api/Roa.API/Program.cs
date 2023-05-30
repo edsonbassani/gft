@@ -8,6 +8,7 @@ using Roa.Infrastructure.Context;
 using Roa.API.Middlewares;
 using Roa.Domain.Entities;
 using AutoMapper.EquivalencyExpression;
+using Roa.API.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -21,6 +22,7 @@ var builder = WebApplication.CreateBuilder(args);
     }));
     builder.Services.AddODataQueryFilter();
     builder.Services.AddDbContext<ApplicationContext>();
+    builder.Services.AddAutoMapper(typeof(MapProfile));
     builder.Services.AddAutoMapper(config => config.AddCollectionMappers(), typeof(Dish));
     builder.Services.AddRepositories();
     builder.Services.AddEndpointsApiExplorer();

@@ -10,6 +10,7 @@ public class Period : Entity
         Name = name;
         StartTime = startTime;
         EndTime = endTime;
+        Validate(this, new PeriodValidator());
     }
 
     public Period(string name)

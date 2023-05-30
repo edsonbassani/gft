@@ -10,7 +10,7 @@ public class Dish : Entity
         Name = name;
         DishTypeId = dishTypeId;
         PeriodId = periodId;
-        //Validate(this, new DishValidator());
+        Validate(this, new DishValidator());
     }
 
     public string Name { get; private set; }
