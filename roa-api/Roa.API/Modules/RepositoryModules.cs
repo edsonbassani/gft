@@ -1,4 +1,6 @@
-﻿using Roa.Domain.Entities;
+﻿using Roa.Application.DTOs;
+using Roa.Application.Repositories;
+using Roa.Domain.Entities;
 using Roa.Domain.Repositories;
 using Roa.Infrastructure.Repositories;
 
@@ -9,6 +11,7 @@ public static class RepositoryModules
     public static IServiceCollection AddRepositories(this IServiceCollection service)
     {
         service.AddScoped<IRepository<Dish>, BaseRepository<Dish>>();
+        service.AddScoped<IRepositoryDTO<DishDto>, RepositoryDishDto>();
         return service;
     }
 }
