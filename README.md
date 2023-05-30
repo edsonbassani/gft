@@ -79,3 +79,5 @@ dotnet ef migrations script --idempotent --startup-project ./Roa.API/Roa.API.csp
 ``` powershell
 dotnet ef migrations remove --startup-project ./Roa.API/Roa.API.csproj -p ./Roa.Infrastructure/Roa.Infrastructure.csproj
 ```
+![OAS3](https://raw.githubusercontent.com/edsonbassani/gft/main/roa-api/Assets/roa-api-swagger.png)
+
