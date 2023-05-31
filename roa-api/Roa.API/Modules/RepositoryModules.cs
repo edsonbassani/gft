@@ -12,6 +12,9 @@ public static class RepositoryModules
     {
         service.AddScoped<IRepository<Dish>, BaseRepository<Dish>>();
         service.AddScoped<IRepositoryDTO<DishDto>, RepositoryDishDto>();
+
+        service.AddScoped<IRepository<DishType>, BaseRepository<DishType>>();
+        service.AddScoped<IRepositoryDTO<DishTypeDto>, RepositoryDishTypeDto>();
         return service;
     }
 }

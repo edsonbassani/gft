@@ -22,8 +22,8 @@ var builder = WebApplication.CreateBuilder(args);
     }));
     builder.Services.AddODataQueryFilter();
     builder.Services.AddDbContext<ApplicationContext>();
-    builder.Services.AddAutoMapper(typeof(MapProfile));
     builder.Services.AddAutoMapper(config => config.AddCollectionMappers(), typeof(Dish));
+    builder.Services.AddAutoMapper(typeof(MapProfile));
     builder.Services.AddRepositories();
     builder.Services.AddEndpointsApiExplorer();
   builder.Services.AddSwaggerGen(c =>

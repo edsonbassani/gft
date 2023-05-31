@@ -22,7 +22,7 @@ public class Period : Entity
     public string Name { get; private set; }
     public TimeSpan StartTime { get; private set; }
     public TimeSpan EndTime { get; private set;}
-    public ICollection<Dish> Dishes { get; private set; }
+    public virtual ICollection<Dish> Dishes { get; private set; }
 }
 
 internal class PeriodValidator : AbstractValidator<Period>

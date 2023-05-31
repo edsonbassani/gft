@@ -12,7 +12,7 @@ public class DishType : Entity
     }
 
     public string Name { get; private set; }
-    public ICollection<Dish> Dishes { get; set; }
+    public virtual ICollection<Dish> Dishes { get; set; }
 }
 
 internal class DishTypeValidator : AbstractValidator<DishType>

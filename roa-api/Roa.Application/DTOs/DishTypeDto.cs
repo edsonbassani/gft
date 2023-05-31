@@ -4,4 +4,5 @@ namespace Roa.Application.DTOs;
 public class DishTypeDto : BaseDto
 {
     public string Name { get; set; }
+
 }

@@ -15,9 +15,9 @@ public class Dish : Entity
 
     public string Name { get; private set; }
     public int DishTypeId { get; private set; }
-    public DishType DishType { get; private set; }
+    public virtual DishType DishType { get; private set; }
     public int PeriodId { get; private set;}
-    public Period Period { get; private set; }
+    public virtual Period Period { get; private set; }
 
 }
 
