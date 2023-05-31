@@ -37,5 +37,4 @@ public class DishTypesController : Controller
         var dishTypes = _dishTypeRepositoryDTO.GetById(id);
         return Ok(dishTypes.Result);
     }
-
 }

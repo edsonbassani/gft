@@ -3,11 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Roa.Application.DTOs;
 using Roa.Domain.Entities;
 using Roa.Domain.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Roa.Application.Repositories
 {
