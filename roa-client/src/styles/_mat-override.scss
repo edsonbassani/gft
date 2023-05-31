@@ -1,0 +1,149 @@
+// For globally overriding Material styles
+button[mat-button],
+button[mat-flat-button],
+button[mat-stroked-button] {
+  height: 43px !important;
+  min-width: fit-content;
+}
+
+a.dashed-button,
+button.dashed-button {
+  height: 43px !important;
+  background-color: transparent !important;
+  color: #0c69b0 !important;
+  border: 1px dashed #0c69b0;
+}
+
+[mat-row]:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+.mdc-data-table__cell {
+  vertical-align: middle;
+}
+
+.mat-mdc-table .mdc-data-table__header-row {
+  min-height: 25px;
+}
+
+th[mat-header-cell] {
+  vertical-align: middle;
+}
+
+.mdc-tab--active {
+  font-weight: bold;
+}
+
+.mdc-switch__track {
+  height: 24px !important;
+  border-radius: 24px !important;
+}
+
+.mdc-switch__icon {
+  visibility: hidden;
+}
+
+mat-form-field {
+  width: 100%;
+
+  mat-label {
+    font-size: 1.3rem;
+    color: $em-color--darkgray;
+    position: relative;
+    top: -0.25rem;
+  }
+
+  *[matInput] {
+    font-size: 1.1rem !important;
+  }
+
+  .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label:has(mat-label):has(tool-tip) {
+    top: 25px;
+  }
+
+  [matTextPrefix] {
+    margin-right: 0.5rem;
+    color: $em-color--mediumgray;
+
+    unity-icon {
+      position: relative;
+      top: 7px;
+      left: -5px;
+    }
+  }
+
+  .mat-mdc-form-field-infix {
+    min-height: unset;
+  }
+
+  .mat-mdc-form-field-subscript-wrapper {
+    background-color: white;
+    position: relative;
+    top: 1px;
+  }
+}
+
+mat-form-field[dense] {
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined:has(.mat-mdc-form-field-flex .mdc-notched-outline) {
+    height: 36px;
+
+    .mat-mdc-form-field-flex .mat-mdc-form-field-icon-suffix mat-datepicker-toggle button {
+      height: 42px;
+      padding: 4px;
+    }
+  }
+
+  mat-label {
+    font-size: 1rem;
+  }
+
+  .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+    top: 31px;
+  }
+
+  .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label:has(mat-label):has(tool-tip) {
+    top: 23px;
+  }
+}
+
+.mat-mdc-tab-list {
+  border-bottom: 1px solid lightgray;
+}
+
+mat-form-field+tidex-validation-error-message {
+  display:block;
+  margin-bottom: 1.25rem;
+}
+
+.mat-form-field-no-padding .mat-mdc-form-field-subscript-wrapper {
+  height: 0;
+}
+
+mat-expansion-panel-header .mat-content {
+  flex: unset
+}
+
+mat-expansion-panel-header:not(.mat-expanded) .mat-expansion-indicator {
+  padding-bottom: 1rem;
+}
+
+.mat-mdc-form-field-icon-prefix {
+  padding: 0 .75rem !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+  height: 48px;
+}
+
+.mat-mdc-menu-content {
+  padding: 0 !important;
+}
+
+.mdc-tooltip__surface {
+  font-size: x-small !important;
+}

@@ -1,0 +1,29 @@
+::ng-deep .confirm-button-class {
+    border: 1px solid #cccccd !important;
+    background: 0 0 !important;
+    color: #0c69b0 !important;
+    outline: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+  ::ng-deep .confirm-button-class:hover, ::ng-deep .confirm-button-class:focus {
+    border-color: #0c69b0 !important;
+    color: #0c69b0 !important;
+  }
+  
+  ::ng-deep .cancel-button-class {
+    border: 1px solid #cccccd !important;
+    background: #0c69b0 !important;
+    color: #fff !important;
+    outline: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #cccccd;
+  }
+  
+  ::ng-deep .cancel-button-class:hover, ::ng-deep .cancel-button-class:focus {
+    background-color: #3190D9 !important;
+    border-color: #3190D9 !important;
+    color: #fff !important;
+  }

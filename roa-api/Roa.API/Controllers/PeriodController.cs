@@ -24,7 +24,7 @@ public class PeriodsController : Controller
     [Route("~/Periods/GetAll")]
     public ActionResult<List<PeriodDto>> GetAll()
     {
-        var periods = _periodRepositoryDTO.GetAll();
+        var periods = _periodRepositoryDTO.GetAll().OrderBy(x => x.Id);
         return Ok(periods);
     }
 

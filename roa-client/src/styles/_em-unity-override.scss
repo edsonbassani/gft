@@ -1,0 +1,14 @@
+// For globally overriding Unity styles
+
+.em-l-grid {
+  margin: 0 !important;
+  overflow: auto;
+}
+
+.em-c-pagination__item {
+  user-select: none;
+}
+
+.em-c-pagination__link {
+  cursor: pointer;
+}

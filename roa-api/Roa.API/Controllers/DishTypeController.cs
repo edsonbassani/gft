@@ -24,7 +24,7 @@ public class DishTypesController : Controller
     [Route("~/DishTypes/GetAll")]
     public ActionResult<List<DishTypeDto>> GetAll()
     {
-        var dishTypes = _dishTypeRepositoryDTO.GetAll();
+        var dishTypes = _dishTypeRepositoryDTO.GetAll().OrderBy(x => x.Id);
         return Ok(dishTypes);
     }
 

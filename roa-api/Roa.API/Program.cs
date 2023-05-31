@@ -52,13 +52,11 @@ var app = builder.Build();
 
   app.UseHttpsRedirection();
 
-  if (app.Environment.IsEnvironment("Local"))
-  {
-    app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-  }
   
-    app.UseAuthorization();
-    app.MapControllers().AllowAnonymous();
+  app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+  
+  app.UseAuthorization();
+  app.MapControllers().AllowAnonymous();
   
   app.MapGet("/healthCheck", () => "API Running");
 }

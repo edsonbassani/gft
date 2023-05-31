@@ -23,17 +23,17 @@ public class DishesController : Controller
     [HttpGet]
     [Produces("application/json")]
     [ProducesResponseType(typeof(IEnumerable<DishDto>), StatusCodes.Status200OK)]
-    [Route("~/GetAll")]
+    [Route("~/Dishes/GetAll")]
     public ActionResult<List<DishDto>> GetAll()
     {
-        var dishes = _dishRepositoryDTO.GetAll();
+        var dishes = _dishRepositoryDTO.GetAll().OrderBy(x => x.Id);
         return Ok(dishes);
     }
 
     [HttpGet]
     [Produces("application/json")]
     [ProducesResponseType(typeof(DishDto), StatusCodes.Status200OK)]
-    [Route("~/GetSingle")]
+    [Route("~/Dishes/GetSingle")]
     public ActionResult<DishDto> GetById(int id)
     {
         var dishes = _dishRepositoryDTO.GetById(id);
@@ -43,7 +43,7 @@ public class DishesController : Controller
     [HttpGet]
     [Produces("application/json")]
     [ProducesResponseType(typeof(IEnumerable<DishDto>), StatusCodes.Status200OK)]
-    [Route("~/GetAllWithRelated")]
+    [Route("~/Dishes/GetAllWithRelated")]
     public ActionResult<List<DishDto>> GetAllWithRelated()
     {
         var dishes = _dishRepositoryDTO.GetAllWithRelated();
