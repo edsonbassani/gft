@@ -24,7 +24,7 @@
       </div>
     </div>
     
-    <div matTooltip="Reset Order" class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" (click)="handleState('Reset', 1);">
+    <div matTooltip="Reset Order" class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" (click)="handleState('Reset', 1);" *ngIf="order !== ''">
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
         <div class="h-20 w-20 pl-40">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
