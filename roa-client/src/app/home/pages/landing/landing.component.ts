@@ -24,6 +24,10 @@ export class LandingComponent implements OnInit {
   selectedDishTypeId: number = 0;
   selectedDishId: number = 0;
 
+  outputResult: string = '';
+
+  order: string = '';
+
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
@@ -59,6 +63,7 @@ export class LandingComponent implements OnInit {
 
   handleState(action: string, currentState:number) {
     this.showPeriods = false;
+
     if(action === 'Periods'){
       this.showDishTypes = true;
       this.showDishes = false;
@@ -73,9 +78,28 @@ export class LandingComponent implements OnInit {
       this.listDishes(this.selectedDishTypeId, this.selectedPeriodId);
     }
 
-    if(action === 'Back'){
+    if(action === 'BackPeriods'){
       this.resetState();
     }
+
+    if(action === 'BackDishTypes'){
+      this.showPeriods = false;
+      this.showDishTypes = true;
+      this.showDishes = false;
+    }
+
+    if(action === 'Reset'){
+      this.resetState();
+    }
+    
+  }
+
+  addOrder(dishId: number){
+    this.outputResult += (dishId + ',');
+  }
+
+  checkOrder(){
+   
   }
 
   resetState(){
@@ -86,5 +110,8 @@ export class LandingComponent implements OnInit {
     this.selectedPeriodId = 0;
     this.selectedDishTypeId = 0;
     this.selectedDishId = 0;
+
+    this.order = this.outputResult;
+    this.outputResult = '';
   }
 }

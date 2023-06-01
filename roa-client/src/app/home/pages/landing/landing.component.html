@@ -3,13 +3,9 @@
 
     <ng-container *ngIf="showPeriods">
     <div *ngFor="let period of periods" class="w-full h-0 shadow-lg pb-half rounded-xl cursor-pointer" 
-    [ngClass]="{
-                  'bg-yellow-300': period.id === 1, 
-                  'bg-red-300': period.id === 2 
-               }" 
-               (click)="handleState('Periods', period.id);"
-               
-               >
+    [ngClass]="{'bg-yellow-300': period.id === 1, 
+                'bg-red-300': period.id === 2 }" 
+               (click)="resetState();handleState('Periods', period.id);">
 
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
         <div>
@@ -18,9 +14,22 @@
       </div>
     </div>
 
-    <div class="w-full h-0 pb-half rounded-xl">
+    <div matTooltip="Check Order" class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" *ngIf="order !== ''" (click)="checkOrder();">
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
-        <div>
+        <div class="h-20 w-20 pl-40">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+    <div matTooltip="Reset Order" class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" (click)="handleState('Reset', 1);">
+      <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
+        <div class="h-20 w-20 pl-40">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z" />
+          </svg>
         </div>
       </div>
     </div>
@@ -31,8 +40,8 @@
     [ngClass]="{'bg-yellow-300': dishType.id === 1, 
                 'bg-red-300': dishType.id === 2, 
                 'bg-green-300': dishType.id === 3, 
-                'bg-indigo-300': dishType.id === 4
-               }" (click)="handleState('DishTypes', dishType.id);selectedDishTypeId = dishType.id;">
+                'bg-indigo-300': dishType.id === 4}" 
+                (click)="handleState('DishTypes', dishType.id);selectedDishTypeId = dishType.id;">
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
         <div>
           <h2 class="text-2xl font-bold text-center">{{dishType.name}}</h2>
@@ -40,7 +49,7 @@
       </div>
     </div>
 
-    <div class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" (click)="handleState('Back', 1);">
+    <div class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" (click)="handleState('BackPeriods', 1);">
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
         <div class="h-20 w-20 pl-40">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -52,20 +61,24 @@
   </ng-container>
 
   <ng-container *ngIf="showDishes">
-  <div *ngFor="let dish of dishes" class="w-full h-0 shadow-lg pb-half rounded-xl" 
+  <div *ngFor="let dish of dishes" class="w-full h-0 shadow-lg pb-half rounded-xl cursor-pointer" (click)="addOrder(dish.id);"
     [ngClass]="{'bg-yellow-300': dish.dishTypeId === 1, 
                 'bg-red-300': dish.dishTypeId === 2, 
                 'bg-green-300': dish.dishTypeId === 3, 
-                'bg-indigo-300': dish.dishTypeId === 4
-              }">
+                'bg-indigo-300': dish.dishTypeId === 4 }">
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
         <div>
           <h2 class="text-2xl font-bold text-center">{{dish.name}}</h2>
         </div>
+        <div>
+          <div *ngIf="dish.name === 'Coffee' || dish.name === 'Potato'" class="text-2xl font-bold text-center">
+            <input style="width: 50px;height: 50px;" type="number" max="10">
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" (click)="handleState('Back', 1);">
+    <div class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" (click)="handleState('BackDishTypes', 1);">
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
         <div class="h-20 w-20 pl-40">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -75,5 +88,6 @@
       </div>
     </div>
   </ng-container>
+  {{outputResult}}
   </div>
 </div>
