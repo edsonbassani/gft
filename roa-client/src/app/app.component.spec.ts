@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'roa-client'`, () => {
+  it(`should have as title 'ROA'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('roa-client');
+    expect(app.title).toEqual('ROA');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('roa-client app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Restaurant Order Application');
   });
 });
