@@ -29,6 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ![Show Case](https://raw.githubusercontent.com/edsonbassani/gft/main/roa-client/src/assets/showcase.png)
+![Show Case](https://raw.githubusercontent.com/edsonbassani/gft/main/roa-client/src/assets/unit_tests.png)
+
+
 
 
 # Restaurant Order Application - API
