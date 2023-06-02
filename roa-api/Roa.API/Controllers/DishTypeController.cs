@@ -25,6 +25,10 @@ public class DishTypesController : Controller
     public ActionResult<List<DishTypeDto>> GetAll()
     {
         var dishTypes = _dishTypeRepositoryDTO.GetAll().OrderBy(x => x.Id);
+
+        if (dishTypes == null)
+            return NotFound();
+
         return Ok(dishTypes);
     }
 
@@ -34,7 +38,11 @@ public class DishTypesController : Controller
     [Route("~/DishTypes/GetSingle")]
     public ActionResult<DishTypeDto> GetById(int id)
     {
-        var dishTypes = _dishTypeRepositoryDTO.GetById(id);
-        return Ok(dishTypes.Result);
+        var dishType = _dishTypeRepositoryDTO.GetById(id);
+
+        if (dishType == null)
+            return NotFound();
+
+        return Ok(dishType.Result);
     }
 }

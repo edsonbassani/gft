@@ -27,6 +27,10 @@ public class DishesController : Controller
     public ActionResult<List<DishDto>> GetAll()
     {
         var dishes = _dishRepositoryDTO.GetAll().OrderBy(x => x.Id);
+
+        if(dishes == null)
+            return NotFound();
+
         return Ok(dishes);
     }
 
@@ -36,8 +40,12 @@ public class DishesController : Controller
     [Route("~/Dishes/GetSingle")]
     public ActionResult<DishDto> GetById(int id)
     {
-        var dishes = _dishRepositoryDTO.GetById(id);
-        return Ok(dishes.Result);
+        var dish = _dishRepositoryDTO.GetById(id);
+
+        if (dish == null)
+            return NotFound();
+
+        return Ok(dish.Result);
     }
 
     [HttpGet]
@@ -47,6 +55,10 @@ public class DishesController : Controller
     public ActionResult<List<DishDto>> GetAllWithRelated()
     {
         var dishes = _dishRepositoryDTO.GetAllWithRelated();
+
+        if (dishes == null)
+            return NotFound();
+
         return Ok(dishes);
     }
 }

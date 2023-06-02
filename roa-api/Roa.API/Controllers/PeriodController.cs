@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Roa.Application.DTOs;
 using Roa.Application.Repositories;
+using Roa.Domain.Entities;
 
 namespace Roa.API.Controllers.Programs;
 
@@ -25,6 +26,10 @@ public class PeriodsController : Controller
     public ActionResult<List<PeriodDto>> GetAll()
     {
         var periods = _periodRepositoryDTO.GetAll().OrderBy(x => x.Id);
+
+        if (periods == null)
+            return NotFound();
+
         return Ok(periods);
     }
 
@@ -35,6 +40,10 @@ public class PeriodsController : Controller
     public ActionResult<PeriodDto> GetById(int id)
     {
         var period = _periodRepositoryDTO.GetById(id);
+
+        if (period == null)
+            return NotFound();
+
         return Ok(period.Result);
     }
 }
