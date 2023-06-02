@@ -1,6 +1,6 @@
-@import '../utils/em-text';
+@import '../utils/text';
 
-$em-violet: (
+$violet: (
   50: #e7e7ef,
   100: #c4c4d7,
   200: #9d9cbd,
@@ -16,19 +16,19 @@ $em-violet: (
   A400: #2823ff,
   A700: #0f09ff,
   contrast: (
-    50: $em-dark-primary-text,
-    100: $em-dark-primary-text,
-    200: $em-dark-primary-text,
-    300: $em-light-primary-text,
-    400: $em-light-primary-text,
-    500: $em-light-primary-text,
-    600: $em-light-primary-text,
-    700: $em-light-primary-text,
-    800: $em-light-primary-text,
-    900: $em-light-primary-text,
-    A100: $em-dark-primary-text,
-    A200: $em-light-primary-text,
-    A400: $em-light-primary-text,
-    A700: $em-light-primary-text,
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
   ),
 );

@@ -48,7 +48,7 @@ mat-form-field {
 
   mat-label {
     font-size: 1.3rem;
-    color: $em-color--darkgray;
+    color: $color--darkgray;
     position: relative;
     top: -0.25rem;
   }
@@ -63,7 +63,7 @@ mat-form-field {
 
   [matTextPrefix] {
     margin-right: 0.5rem;
-    color: $em-color--mediumgray;
+    color: $color--mediumgray;
 
     // icon {
     //   position: relative;
@@ -115,7 +115,7 @@ mat-form-field[dense] {
   border-bottom: 1px solid lightgray;
 }
 
-mat-form-field+tidex-validation-error-message {
+mat-form-field+roa-validation-error-message {
   display:block;
   margin-bottom: 1.25rem;
 }
