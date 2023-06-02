@@ -1,0 +1,31 @@
+@import '../text';
+
+$tamarillo: (
+  50: #fff1f1,
+  100: #ffdfdf,
+  200: #ffc5c5,
+  300: #ff9c9c,
+  400: #ff6464,
+  500: #ff3333,
+  600: #ee1414,
+  700: #c80d0d,
+  800: #a90f0f,
+  900: #891313,
+  950: #4b0404
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  ),
+);

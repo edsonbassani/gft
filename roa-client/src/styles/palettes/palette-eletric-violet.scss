@@ -1,20 +1,17 @@
 @import '../utils/text';
 
-$violet: (
-  50: #e7e7ef,
-  100: #c4c4d7,
-  200: #9d9cbd,
-  300: #7574a3,
-  400: #58578f,
-  500: #3a397b,
-  600: #343373,
-  700: #2c2c68,
-  800: #25245e,
-  900: #18174b,
-  A100: #8b89ff,
-  A200: #5956ff,
-  A400: #2823ff,
-  A700: #0f09ff,
+$electric-violet: (
+  50: #f2f0ff,
+  100: #e9e4ff,
+  200: #d5cdff,
+  300: #b7a6ff,
+  400: #9573ff,
+  500: #763bff,
+  600: #6814ff,
+  700: #5900ff,
+  800: #4b01d6,
+  900: #3f03af,
+  950: #240077
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
