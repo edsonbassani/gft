@@ -1,0 +1,31 @@
+@import '../utils/text';
+
+$electric-violet: (
+    50: #f7f7f7,
+    100: #e3e3e3,
+    200: #c8c8c8,
+    300: #a4a4a4,
+    400: #818181,
+    500: #666666,
+    600: #515151,
+    700: #434343,
+    800: #383838,
+    900: #313131,
+    950: #000000
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  ),
+);
