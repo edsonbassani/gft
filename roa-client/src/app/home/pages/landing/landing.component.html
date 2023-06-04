@@ -1,10 +1,9 @@
-<div class="max-w-screen-lg mx-auto p-4" >
+<div class="max-w-screen-lg mx-auto p-4">
   <div class="grid grid-cols-2 gap-4 mt-12 items-center">
-
     <ng-container *ngIf="showPeriods">
     <div *ngFor="let period of periods" class="w-full h-0 shadow-lg pb-half rounded-xl cursor-pointer" 
-    [ngClass]="{'bg-yellow-300': period.id === 1, 
-                'bg-red-300': period.id === 2 }" 
+    [ngClass]="{'bg-gold-gold-300': period.id === 1, 
+                'bg-red-tamarillo-300': period.id === 2 }" 
                (click)="resetState();handleState('Periods', period.id);">
 
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
@@ -14,7 +13,7 @@
       </div>
     </div>
 
-    <div matTooltip="Check Order" class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" *ngIf="order !== ''" (click)="checkOrder();">
+    <div matTooltip="Check Order" class="w-full h-0 pb-half rounded-xl bg-black-grayscale-100 cursor-pointer" *ngIf="order !== ''" (click)="checkOrder();">
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
         <div class="h-20 w-20 pl-40">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -24,7 +23,7 @@
       </div>
     </div>
     
-    <div matTooltip="Reset Order" class="w-full h-0 pb-half rounded-xl bg-gray-100 cursor-pointer" (click)="handleState('Reset', 1);" *ngIf="order !== ''">
+    <div matTooltip="Reset Order" class="w-full h-0 pb-half rounded-xl bg-black-grayscale-100 cursor-pointer" (click)="handleState('Reset', 1);" *ngIf="order !== ''">
       <div class="max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg place-self-center">
         <div class="h-20 w-20 pl-40">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
