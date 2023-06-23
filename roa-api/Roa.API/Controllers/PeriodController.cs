@@ -4,7 +4,7 @@ using Roa.Application.DTOs;
 using Roa.Application.Repositories;
 using Roa.Domain.Entities;
 
-namespace Roa.API.Controllers.Programs;
+namespace Roa.API.Controllers.Periods;
 
 [ApiController]
 [Route("[controller]")]

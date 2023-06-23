@@ -20,11 +20,12 @@ var builder = WebApplication.CreateBuilder(args);
       options.JsonSerializerOptions.DictionaryKeyPolicy = JsonNamingPolicy.CamelCase;
       options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
     }));
-    builder.Services.AddODataQueryFilter();
     builder.Services.AddDbContext<ApplicationContext>();
     builder.Services.AddAutoMapper(config => config.AddCollectionMappers(), typeof(Dish));
     builder.Services.AddAutoMapper(typeof(MapProfile));
+    builder.Services.AddODataQueryFilter();
     builder.Services.AddRepositories();
+    builder.Services.AddCommands();
     builder.Services.AddEndpointsApiExplorer();
   builder.Services.AddSwaggerGen(c =>
   {

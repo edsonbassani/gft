@@ -1,64 +1,83 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Roa.Application.Commands.Dishes.Get;
+using Roa.Application.Commands.Dishes.List;
 using Roa.Application.DTOs;
 using Roa.Application.Repositories;
 using Roa.Domain.Entities;
 using Roa.Domain.Repositories;
 
-namespace Roa.API.Controllers.Programs;
+namespace Roa.API.Controllers.Dishes;
 
 [ApiController]
 [Route("[controller]")]
 public class DishesController : Controller
 {
     private readonly IMapper _mapper;
-    public readonly IRepositoryDTO<DishDto> _dishRepositoryDTO;
+    private readonly IRepositoryDTO<DishDto> _dishRepositoryDTO;
+    private readonly GetDishHandler _getDishHandler;
+    private readonly ListDishHandler _listDishHandler;
 
-    public DishesController(IMapper mapper, IRepositoryDTO<DishDto> dishRepositoryDTO)
+
+    public DishesController(IMapper mapper, IRepositoryDTO<DishDto> dishRepositoryDTO, ListDishHandler listDishHandler, GetDishHandler getDishHandler)
     {
         _mapper = mapper;
         _dishRepositoryDTO = dishRepositoryDTO;
+        _listDishHandler = listDishHandler;
+        _getDishHandler = getDishHandler;
     }
 
     [HttpGet]
     [Produces("application/json")]
     [ProducesResponseType(typeof(IEnumerable<DishDto>), StatusCodes.Status200OK)]
-    [Route("~/Dishes/GetAll")]
-    public ActionResult<List<DishDto>> GetAll()
+    [Route("~/dishes/getall")]
+    public async Task<ActionResult<List<DishDto>>> GetAll()
     {
-        var dishes = _dishRepositoryDTO.GetAll().OrderBy(x => x.Id);
+        ListDishInput listDishInput = new ListDishInput();
+        var result = await _listDishHandler.Handle(listDishInput);
 
-        if(dishes == null)
-            return NotFound();
+        if (result.Success) return Ok(result.Data);
 
-        return Ok(dishes);
+        return BadRequest(new
+        {
+            result.Message,
+            result.Notifications
+        });
     }
 
     [HttpGet]
     [Produces("application/json")]
     [ProducesResponseType(typeof(DishDto), StatusCodes.Status200OK)]
-    [Route("~/Dishes/GetSingle")]
-    public ActionResult<DishDto> GetById(int id)
+    [Route("~/dishes/getsingle")]
+    public async Task<ActionResult<DishDto>> GetById(int id)
     {
-        var dish = _dishRepositoryDTO.GetById(id);
+        GetDishInput getDishInput = new GetDishInput() { DishId = id };
+        var result = await _getDishHandler.Handle(getDishInput);
 
-        if (dish == null)
-            return NotFound();
+        if (result.Success) return Ok(result.Data);
 
-        return Ok(dish.Result);
+        return BadRequest(new
+        {
+            result.Message,
+            result.Notifications
+        });
     }
 
-    [HttpGet]
+    [HttpGet("~/odata/dishes/getbyid/{dishId}")]
+    [EnableQueryWithCount(MaxAnyAllExpressionDepth = 2, MaxExpansionDepth = 5)]
     [Produces("application/json")]
-    [ProducesResponseType(typeof(IEnumerable<DishDto>), StatusCodes.Status200OK)]
-    [Route("~/Dishes/GetAllWithRelated")]
-    public ActionResult<List<DishDto>> GetAllWithRelated()
+    [ProducesResponseType(typeof(DishDto), StatusCodes.Status200OK)]
+    public async Task<ActionResult<IEnumerable<DishDto>>> ODataGetById(int dishId)
     {
-        var dishes = _dishRepositoryDTO.GetAllWithRelated();
+        GetDishInput getDishInput = new GetDishInput() { DishId = dishId };
+        var result = await _getDishHandler.Handle(getDishInput);
 
-        if (dishes == null)
-            return NotFound();
+        if (result.Success) return Ok(result.Data);
 
-        return Ok(dishes);
+        return BadRequest(new
+        {
+            result.Message,
+            result.Notifications
+        });
     }
 }
