@@ -18,7 +18,7 @@ export class HomeService {
 
   listDishes(): Observable<Dish[]> {
     return this.http
-      .get<Dish[]>(`${this.apiUrl}/dishes/getallwithrelated`)
+      .get<Dish[]>(`${this.apiUrl}/dishes/getall`)
       .pipe(
         retry(2),
         catchError(logAndThrowHttpError<Dish[]>('getDishes')),
@@ -36,7 +36,7 @@ export class HomeService {
 
   getDishType(dishTypeId: number): Observable<DishType> {
     return this.http
-      .get<DishType>(`${this.apiUrl}/dishtypes/getsingle/1`)
+      .get<DishType>(`${this.apiUrl}/odata/dishtypes/getbyid/{{dishTypeId}}`)
       .pipe(
         retry(2),
         catchError(logAndThrowHttpError<DishType>('getDishType')),
